@@ -1,0 +1,45 @@
+{
+  "name": "remote-redux-boilerplate",
+  "version": "0.0.0",
+  "description": "Remote Redux Boilerplate with flow",
+  "main": "src/index.js",
+  "author": "Severin Ibarluzea",
+  "scripts": {
+    "flow": "flow",
+    "test": "jest",
+    "build": "npm run build-type-assert && npm run build-server && npm run build-client",
+    "build-client": "webpack --config webpack.config.client.js",
+    "build-server": "webpack --config webpack.config.server.js",
+    "build-type-assert": "flowtype-asserter ./src/types/index.js ./src/types/assert.js ./src/types/assert.js.flow"
+  },
+  "devDependencies": {
+    "seamless-immutable": "^7.1.2",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-flow-runtime": "^0.15.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "debug": "^3.1.0",
+    "flow-bin": "^0.60.1",
+    "flow-runtime": "^0.16.0",
+    "flowtype-asserter-cli": "^0.0.2",
+    "jest": "^21.2.1",
+    "jest-raw-loader": "^1.0.1",
+    "raw-loader": "^0.5.1",
+    "reduce-reducers": "^0.1.2",
+    "redux": "^3.7.2",
+    "regenerator-runtime": "^0.11.0",
+    "remote-redux": "^0.0.5",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "\\.sql$": "jest-raw-loader",
+      "\\.xlsx$": "jest-raw-loader"
+    }
+  }
+}

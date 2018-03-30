@@ -1,0 +1,18 @@
+{
+  "presets": ["stage-0", "es2015"],
+  "plugins": [
+    ["flow-runtime", { "assert": false, "annotate": false }],
+    "transform-flow-strip-types",
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "test": {
+      "presets": ["es2015", "stage-0"],
+      "plugins": [
+        ["flow-runtime", { "assert": false, "annotate": false }],
+        "transform-flow-strip-types",
+        "transform-decorators-legacy"
+      ]
+    }
+  }
+}
